@@ -1,0 +1,687 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body, html {
+    font-family: 'Open Sans', Arial, sans-serif; /* Clean and modern font */
+    color: #333333; /* Dark grey color for text */
+    line-height: 1.6; /* Spacing for readability */
+    font-size: 16px; /* Standard base font size */
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5em; /* Larger size for main titles */
+    font-weight: bold; /* Bold weight for prominence */
+    margin: 0.67em 0; /* Default margin for spacing */
+}
+
+h2 {
+    font-size: 2em; /* Substantial but less than h1 */
+    font-weight: 600; /* Slightly lighter than h1 for hierarchy */
+    text-align: center; /* Center-aligned as requested */
+    margin: 0.75em 0; /* Standard vertical spacing */
+}
+
+h3 {
+    font-size: 1.75em; /* Smaller than h2 */
+    font-weight: 600; /* Consistent weight with h2 */
+    margin: 0.83em 0; /* Standard spacing */
+}
+
+p {
+    font-size: 1em; /* Standard size for body text */
+    margin-bottom: 1em;
+    line-height: 1.6; /* Space after paragraphs */
+}
+
+.title {
+    font-size: 1em;
+}
+
+/* Navbar Styles */
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* high z-index to ensure navbar is on top */
+    background-color: transparent; /* initially transparent */
+    transition: background-color 0.5s; /* smooth transition for the background */
+    display: flex;
+    justify-content: space-between; /* Space out logo and nav items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Give some space inside the navbar */
+    height: 50px; /* Or whatever size fits best */
+    min-width: 500px; /* Adjust based on your specific needs */
+    white-space: nowrap; 
+    overflow: hidden; /* Hide overflow content */
+}
+
+.navbar-logo {
+    height: 50px; /* Example height, adjust to fit the design */
+    transition: opacity 0.3s ease; /* Smooth transition for the logo swap */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    align-items: center;
+    white-space: nowrap;
+}
+
+#navbar ul li a {
+    margin: 0 0px; /* Adjust based on your layout */
+    padding: 10px 10px; /* Adds padding inside the link boxes */
+    background-color: rgba(42, 42, 42, 0); /* Slightly transparent background */
+    color: #e7e7e7; /* Text color */
+    text-decoration: none; /* Removes the underline from links */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#navbar.scrolled {
+    background-color: white; /* white background on scroll */
+    transform: scale(1.00);
+    text-shadow: none;
+    box-shadow: 0px 0px 5px rgba(54, 54, 54, 0.839); /* 10px white inset border */
+}
+
+#navbar.scrolled ul li a {
+    background-color: transparent; /* Background transitions to clear on scroll */
+    color: black; /* Example text color change on scroll */
+}
+
+.nav-scrolled {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 400px); /* Full height of the viewport minus 200px from the top */
+    background: url('https://i.postimg.cc/pdY680cz/tempImageAAanXq.avif') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464); /* 10px white inset border */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+/* Content Area */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px; /* Adds space between content boxes */
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0); /* White background for content boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Optional: Adds a subtle shadow */
+    padding: 20px; /* Space between content boxes */
+    width: 100%; /* Full width of the container, adjust as needed */
+    box-sizing: border-box;
+}
+
+.content-box h2 {
+    font-family: 'Open Sans', sans-serif; /* Assuming Open Sans is the chosen font */
+    color: #333333; /* Very Dark Gray for headings */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-box p {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333; /* Very Dark Gray for text */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-box img {
+    display: block; /* Ensures that the image is on its own line */
+    width: 100%; /* Sets the width of the images to be the same */
+    height: auto;
+    max-height: 300px; /* Maintains the aspect ratio */
+    max-width: 300px; /* Adjust this value based on your design requirements */
+    margin: 0 auto; /* Centers the image within the content-box */
+}
+
+/* Dropdown */
+.dropdown-content.disabled {
+    display: none; /* Hide the dropdown content */
+    pointer-events: none; /* Prevent mouse events */
+    opacity: 0.5; /* Optional: reduce opacity to indicate it's disabled */
+}
+
+.dropdown-content.enabled {
+    display: block;
+}
+
+/* Dynamic Shadow */
+.dynamic-shadow {
+    margin: 10px;
+    padding: 0;
+    width: 50%; /* Full width */
+    min-width: 25%; /* Minimum width is 25% of the viewport width */
+    transition: box-shadow 0.3s; /* Smooth transition for the shadow effect */
+}
+
+/* Contact Page */
+.contact-hero-header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 400px); /* Full height of the viewport minus 200px from the top */
+    background: url('https://i.postimg.cc/5NTTMQFY/tempImageWiQuZd.avif') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464); /* 10px white inset border */
+}
+
+.contact-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contact-message {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.contact-form {
+    flex-basis: 45%;
+    background: #f9f9f9; /* Adjust based on your theme colors */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* Or your theme color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-icons a {
+    text-decoration: none;
+}
+
+.contact-icons img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+}
+
+.email-icon, .linkedin-icon {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the space between icons if needed */
+}
+
+
+/* About Page */
+.about-hero-header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 400px); /* Full height of the viewport minus 200px from the top */
+    background: url('https://i.postimg.cc/s2RLMFm3/tempImagewtUjwp.avif') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464); /* 10px white inset border */
+}
+
+.about-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.left-column {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-picture {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust as needed */
+}
+
+.bio-message {
+    text-align: center;
+}
+
+.skills-title {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.skills-list {
+    font-weight: normal;
+}
+
+#resume, #education {
+    max-width: 100%;
+    margin: auto; /* Center the content */
+    padding: 20px; /* Add some padding around the text */
+}
+
+.smooth-scrolling-bar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 10px; /* Adjust based on the navbar height */
+    background-color: #ffffff96; /* Slightly transparent background */
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around; /* Increased gap between the two texts */
+    padding: 0px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.smooth-scrolling-bar a {
+    margin: 0 40px; /* Increase the margin to add more gap */
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 5px; /* Add padding for better clickability */
+    background-color: rgba(255, 255, 255, 0.453); /* Slightly transparent background for buttons */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+}
+
+.smooth-scrolling-bar a.active {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #007bff;
+}
+
+.instagram-media {
+    max-width: 100% !important;
+    width: auto !important;
+    background: transparent;
+    margin: 20px auto; /* Center it and provide some spacing */
+    border: none; /* Remove any default borders */
+    box-shadow: none; /* Remove any default shadows */
+}
+
+.instagram-media iframe {
+    width: 100% !important; /* Force the iframe to expand full width of the container */
+}
+
+.instagram-media iframe + div {
+    display: none !important; /* Optionally hide the "View this post on Instagram" */
+}
+
+/* Works Page */
+.works-hero-header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 400px); /* Full height of the viewport minus 200px from the top */
+    background: url('https://i.postimg.cc/g2h5ccvM/tempImageokHgKR.avif') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464); /* 10px white inset border */
+}
+
+.works-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+.works-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.aside {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 5px; /* Adjust based on the navbar height */
+    background-color: #ffffffe5; /* Slightly transparent background */
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around; /* Increased gap between the two texts */
+    padding: 0px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    min-width: 500px;
+}
+
+.aside a {
+    margin: 0 20px; /* Increase the margin to add more gap */
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 5px; /* Add padding for better clickability */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    white-space: nowrap;
+}
+
+.aside a.active {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #007bff;
+    font: bold;
+}
+
+@media (max-width: 1375px) {
+    .aside {
+        position: sticky; /* Makes the sidebar sticky on scroll */
+        top: 55px; /* Distance from the top, adjust based on navbar height plus desired gap */
+        width: 100%; /* Full width of the container */
+        z-index: 10; /* Ensures it doesn’t overlap anything it shouldn’t */
+    }
+}
+
+/* Footer */
+.site-footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    margin: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #3498db;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-social {
+        margin: 10px 0;
+    }
+}
+
+.instagram-post {
+    max-width: 540px;
+    margin: auto;
+}
+
+@media (max-width: 540px) {
+    .instagram-post {
+        width: 100%;
+    }
+}
+
+/* Works Selection */
+section {
+    display: block;
+}
+
+.works-page section {
+    display: none; /* Hide all sections by default */
+}
+
+.works-page section#graphic-design {
+    display: block; /* Only show the graphic design section initially */
+}
+
+.about-page section#resume,
+.about-page section#education {
+    display: block;
+}
+
+/* Motion Grid */
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Horizontal layout */
+    width: 100%;
+    margin: 25px;
+}
+
+.text-content {
+    flex: 40%; /* Takes up 30% of the container */
+    padding: 20px; /* Optional padding */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 80px;
+}
+
+.grid-item {
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Ensures items are square */
+    width: 200px;
+    height: 200px;
+}
+
+.grid-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks the content vertically */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+/* Hover Effects */
+.navbar-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1666bb; /* Example color change on hover */
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+}
+
+.column {
+    flex: 1; /* Make all columns equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure column content is centered */
+    text-align: center; /* Center text horizontally */
+}
+
+.instagram-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    height: 100%; /* Ensure it takes up the full height of the parent container */
+}
+
+.text-column h3 {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin below the title */
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 500px; /* Adjust based on your design requirements */
+}
+
+/* Adjusting the size of images in slideshows */
+.mySlides img, .mySlides2 img, .mySlides3 img, .mySlides4 img {
+    max-width: 80%; /* Adjust this value as needed */
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+}
+
+@media (max-width: 768px) {
+    .three-column-layout {
+        flex-direction: column;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+}

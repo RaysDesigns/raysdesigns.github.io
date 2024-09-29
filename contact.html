@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Raymond Kenny's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/css/lightgallery.min.css" />
+</head>
+<body>
+    <!-- Navigation from your index page -->
+    <nav id="navbar">
+        <img class="navbar-logo" src="https://i.postimg.cc/qvZdQPr3/Logo-name.png" alt="Logo" id="logo">
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="works.html" class="nav-link">My Work</a></li>
+            <li><a href="about.html" class="nav-link">About Me</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+<header class="contact-hero-header">
+    <div class="contact-hero-content">
+        <h1>Contact Page</h1>
+       
+        <!-- Add any additional content -->
+    </div>
+</header>
+    <main class="content-area">
+        <div class="contact-container">
+
+            <div class="contact-message">
+                <p>You can either contact me via email or fill out this quick form. I would love to hear your inquiries or feedback about my work!</p>
+                <div class="contact-icons">
+                    <a href="mailto:raymondjkennyiii@gmail.com" class="email-icon" aria-label="Email me">
+
+
+                        <div class="icon-placeholder"><img src="https://i.postimg.cc/nhZwsJw5/174857.png" ></div>
+
+                        
+                    </a>
+                    <a href="https://www.linkedin.com/in/raymond-kenny/" class="linkedin-icon" target="_blank" aria-label="Visit my LinkedIn">
+                        <div class="icon-placeholder">LinkedIn Icon</div>
+                    </a>
+                </div>
+            </div>
+            <div class="dynamic-shadow">
+            <div class="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/mayrpnzg" method="POST">
+                    <input type="hidden" name="_subject" value="New submission from Portfolio Website!" />
+                    <input type="text" name="_gotcha" style="display:none" />
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="_replyto" required>
+                
+                    <label for="message">Feedback and inquiries:</label>
+                    <textarea id="message" name="message" required></textarea>
+                
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer from your index page -->
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/js/lightgallery.min.js"></script>
+</body>
+</html>
