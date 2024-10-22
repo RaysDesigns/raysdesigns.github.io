@@ -1,5 +1,6 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Add Google Fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -9,40 +10,55 @@
 }
 
 
-
-
+/* Base styles for body and html */
 body, html {
     font-family: 'Open Sans', Arial, sans-serif; /* Clean and modern font */
     color: #333333; /* Dark grey color for text */
     line-height: 1.6; /* Spacing for readability */
     font-size: 16px; /* Standard base font size */
+    min-width: 600px;
 }
 
 /* Typography */
+
+/* Main title (h1) */
 h1 {
-    font-size: 2.5em; /* Larger size for main titles */
-    font-weight: bold; /* Bold weight for prominence */
+    font-family: 'Merriweather', serif; /* Change to Merriweather for a classic serif look */
+    font-size: 3em; /* Larger size for main titles */
+    font-weight: 700; /* Bold weight for prominence */
     margin: 0.67em 0; /* Default margin for spacing */
 }
 
+/* Subtitles (h2) */
 h2 {
-    font-size: 2em; /* Substantial but less than h1 */
-    font-weight: 600; /* Slightly lighter than h1 for hierarchy */
+    font-family: 'Merriweather', serif; /* Merriweather for hierarchy */
+    font-size: 2.5em; /* Substantial but less than h1 */
+    font-weight: 700; /* Bold for emphasis */
     text-align: center; /* Center-aligned as requested */
-    margin: 0.75em 0; /* Standard vertical spacing */
+    margin: 10px 0; /* Standard vertical spacing */
 }
 
+/* Section headers (h3) */
 h3 {
-    font-size: 1.75em; /* Smaller than h2 */
-    font-weight: 600; /* Consistent weight with h2 */
+    font-family: 'Merriweather', serif; /* Merriweather for consistency */
+    font-size: 2em; /* Smaller than h2 */
+    font-weight: 700; /* Consistent weight with h2 */
     margin: 0.83em 0; /* Standard spacing */
+    text-align: center;
 }
 
+/* Paragraph text (p) */
 p {
+    font-family: 'Open Sans', sans-serif; /* Keeping Open Sans for body text */
     font-size: 1em; /* Standard size for body text */
     margin-bottom: 1em;
     line-height: 1.6; /* Space after paragraphs */
 }
+.graphic-p p {
+    text-align: center;
+}
+
+
 
 .title {
     font-size: 1em;
@@ -83,11 +99,16 @@ p {
 
 #navbar ul li a {
     margin: 0 0px; /* Adjust based on your layout */
-    padding: 10px 10px; /* Adds padding inside the link boxes */
+    padding: 5px 10px; /* Adds padding inside the link boxes */
     background-color: rgba(42, 42, 42, 0); /* Slightly transparent background */
     color: #e7e7e7; /* Text color */
     text-decoration: none; /* Removes the underline from links */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#navbar ul li a.active {
+    border-bottom: 2.5px solid #007bff; /* Adds an underline for the active page */
+    color: #c1dbf7; /* Optional: change the text color to indicate it's active */
 }
 
 #navbar.scrolled {
@@ -127,7 +148,8 @@ p {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    z-index: 2; /* Ensure the text is above the background */
+    z-index: 2;
+    max-width: 1200px; /* Example max-width, adjust based on your design */
 }
 
 /* Content Area */
@@ -137,6 +159,21 @@ p {
     align-items: center;
     padding: 20px;
     gap: 15px; /* Adds space between content boxes */
+}
+
+.content-area-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px; /* Adds space between content boxes */
+}
+
+.content-area-about h2 {
+    font-family: 'Open Sans', sans-serif; /* Assuming Open Sans is the chosen font */
+    color: #333333; /* Very Dark Gray for headings */
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .content-box {
@@ -190,6 +227,7 @@ p {
     transition: box-shadow 0.3s; /* Smooth transition for the shadow effect */
 }
 
+
 /* Contact Page */
 .contact-hero-header {
     position: relative;
@@ -217,9 +255,12 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 40px;
 }
 
+.contact-message h3 {
+    margin-bottom: 5px;
+}
 .contact-message {
     flex-basis: 45%;
     text-align: center;
@@ -271,8 +312,8 @@ p {
 }
 
 .contact-icons img {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
 }
 
 .email-icon, .linkedin-icon {
@@ -308,9 +349,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 40px;
     margin-bottom: 40px;
 }
+
+
 
 .left-column {
     flex-basis: 30%;
@@ -379,21 +422,26 @@ p {
     color: #007bff;
 }
 
-.instagram-media {
-    max-width: 100% !important;
-    width: auto !important;
-    background: transparent;
-    margin: 20px auto; /* Center it and provide some spacing */
-    border: none; /* Remove any default borders */
-    box-shadow: none; /* Remove any default shadows */
+
+
+.instagram-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Optional: Adjusts the gap between the posts */
+    margin: 20px 0; /* Optional: Adds vertical spacing above and below the embed */
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464); /* 10px white inset border */
 }
 
-.instagram-media iframe {
-    width: 100% !important; /* Force the iframe to expand full width of the container */
-}
-
-.instagram-media iframe + div {
-    display: none !important; /* Optionally hide the "View this post on Instagram" */
+.instagram-post {
+    width: 350px; /* Adjust the width of the embedded posts */
+    height: 540px; /* Adjust the height of the embedded posts */
+    overflow-y: scroll; /* Ensures posts are scrollable */
+    margin: 5px;
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.464);
+    padding: 10px; /* Optional: Adds space inside the embed container */
+    
 }
 
 /* Works Page */
@@ -422,15 +470,15 @@ p {
 .works-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    padding: 40px;
+    margin-bottom: 4 0px;
 }
 
 .aside {
     position: -webkit-sticky; /* For Safari */
     position: sticky;
-    top: 5px; /* Adjust based on the navbar height */
+    top: 7px; /* Adjust based on the navbar height */
     background-color: #ffffffe5; /* Slightly transparent background */
     z-index: 10000;
     display: flex;
@@ -505,7 +553,7 @@ p {
 .social-icon {
     width: 40px;
     height: 40px;
-    margin: 0 10px;
+    margin: 0px 10px;
     transition: transform 0.3s;
 }
 
@@ -525,10 +573,7 @@ p {
     }
 }
 
-.instagram-post {
-    max-width: 540px;
-    margin: auto;
-}
+
 
 @media (max-width: 540px) {
     .instagram-post {
@@ -556,37 +601,48 @@ section {
 
 /* Motion Grid */
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Horizontal layout */
-    width: 100%;
-    margin: 25px;
+    max-width: 1200px; /* Match this to the max-width of the .hero-content */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Optional padding for spacing */
+    width: 100%; /* Ensure full width within the max-width */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
-.text-content {
-    flex: 40%; /* Takes up 30% of the container */
-    padding: 20px; /* Optional padding */
+/* Motion Graphics Two-Column Layout */
+.motion-container {
+    display: flex; /* Two-column layout */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    max-width: 1200px; /* Consistent max-width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    width: 100%;
+    box-sizing: border-box;
 }
+
+
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    margin: 80px;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the grid */
+    gap: 10px;
+    flex: 1; /* Equal space for the grid */
+    max-width: 100%;
+    padding: 35px; /* Add padding to match text content's padding */
+    box-sizing: border-box; /* Include padding in element's width */
 }
 
+/* Grid Items */
 .grid-item {
     background-color: #000;
     overflow: hidden;
     position: relative;
     aspect-ratio: 1 / 1; /* Ensures items are square */
-    width: 200px;
-    height: 200px;
+    width: 100%; /* Full width of grid container */
 }
 
 .grid-item img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 50%;
@@ -594,10 +650,10 @@ section {
     transform: translate(-50%, -50%);
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stacks the content vertically */
+    .motion-container {
+        flex-direction: column; /* Stack text and grid vertically on smaller screens */
     }
 
     .grid-container {
@@ -623,14 +679,145 @@ section {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
 
+/* Ensure all slides are hidden initially */
+.mySlidesMap, .mySlidesCoffee, .mySlidesMenu, .mySlidesFoxhillMain, .mySlidesFoxhillSquare, .mySlidesSpiceMain, .mySlidesSpiceSquare {
+    display: none;
+}
+
+/* First slide should be visible */
+.mySlidesMap:first-child, .mySlidesCoffee:first-child, .mySlidesMenu:first-child, 
+.mySlidesFoxhillMain:first-child, .mySlidesFoxhillSquare:first-child, 
+.mySlidesSpiceMain:first-child, .mySlidesSpiceSquare:first-child {
+    display: block;
+}
+
+/* Style for next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0; /* No padding by default */
+    margin-top: -22px;
+    color: black; /* Black arrow */
+    font-weight: bold;
+    font-size: 24px;
+    background-color: transparent; /* Transparent background by default */
+    border-radius: 0; /* No border-radius */
+    z-index: 999;
+    user-select: none;
+    opacity: 0.9; /* Slight opacity for visibility */
+}
+
+/* Position the arrows overlapping the edge of the page */
+.prev {
+    left: 25px; /* Shift left arrow outside the container, adjust as needed */
+}
+
+.next {
+    right: 25px; /* Shift right arrow outside the container, adjust as needed */
+}
+
+#foxhill .slideshow-column:nth-child(3) .prev, 
+#spice .slideshow-column:nth-child(3) .prev {
+    left: 65px;  /* Move left arrow inward by 10px for third column */
+    margin-top: -50px; 
+}
+#foxhill .slideshow-column:nth-child(3) .next, 
+#spice .slideshow-column:nth-child(3) .next {
+     /* Move left arrow inward by 10px for third column */
+    right: 65px; 
+    margin-top: -50px;
+}
+
+/* On hover, add a semi-transparent background with padding */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.07); /* Semi-transparent black background */
+    padding-left: 7.5px;
+    padding-right: 7.5px; 
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Ensure content area has padding */
+.content-area, .content-area-about {
+    padding: 30px;
+}
+
+/* Two-column layout */
+.two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 60px 0;
+}
+
+.text-column {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.slideshow-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.slideshow-column p{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.resume-p p{
+margin-left: 30px; /* Indents the entire paragraph by 30px */
+}
+
+.center-p p{
+    text-align: center;
+}
+
+/* Make sure the images fit well */
+.mySlidesMap img,  .mySlidesMenu img, 
+.mySlidesFoxhillMain img, .mySlidesFoxhillSquare img, 
+.mySlidesSpiceMain img, .mySlidesSpiceSquare img {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Add drop shadow */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;  /* Stack columns vertically */
+    }
+
+    .slideshow-container {
+        padding: 0 15px;  /* Less padding for smaller screens */
+    }
+
+    .text-column {
+        text-align: center;  /* Center-align text for smaller screens */
+    }
+}
 
 .three-column-layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: -20px;
 }
 
 .column {
@@ -642,18 +829,105 @@ section {
     text-align: center; /* Center text horizontally */
 }
 
-.instagram-column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ .content-area-about h3 {
+    text-align: left;
 }
+
 
 .text-column {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center text vertically */
-    height: 100%; /* Ensure it takes up the full height of the parent container */
+    height: 100%;
+    margin-top: -60px; /* Ensure it takes up the full height of the parent container */
+}
+
+.strategy-text-column {
+    margin-top: 20px;
+}
+
+.image-column {
+    flex: 1;
+}
+
+.strat-image-column {
+    margin-top: -50px;
+}
+
+#strategy-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.strategy-image {
+    max-width: 100%;
+    height: auto;
+    background-color: transparent; /* Keep the background transparent */
+}
+
+.slideshow-footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Four Column Layout */
+.four-column-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.four-column-layout .column {
+    flex: 1;
+    text-align: center;
+}
+
+.four-column-layout h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.four-column-layout .column:first-child {
+    margin-top: -25px; /* Adjust this value for better alignment */
+}
+.four-column-layout p {
+    font-size: 1.1em;
+}
+
+/* Center Text for Results Section */
+.results-section {
+    text-align: center; /* Centers the text within the section */
+    width: 100%; /* Ensures the section takes up full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; /* Add some margin for spacing above and below */
+}
+
+.results-section h3 {
+    font-size: 2em; /* Adjust the size of the Results title */
+    text-align: center;
+    margin-bottom: 20px; /* Space between the title and the paragraphs */
+}
+
+.results-section p {
+    font-size: 1.2em; /* Adjust the paragraph font size */
+    max-width: 800px; /* Limit the paragraph width for better readability */
+    margin-bottom: 20px;
+   
+}
+
+/* Center Title */
+.center-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    margin-top: -20px;
 }
 
 .text-column h3 {
@@ -676,6 +950,8 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
 }
 
+
+ 
 @media (max-width: 768px) {
     .three-column-layout {
         flex-direction: column;
@@ -685,3 +961,297 @@ section {
         max-width: 100%;
     }
 }
+
+.menus p {
+text-align: center;
+max-width: 90%;
+}
+
+.menus img{
+   max-width: 60%; 
+}
+
+
+/* Horizontal Divider */
+.divider {
+    width: 80%; /* Adjust width to fit your design */
+    height: 1px; /* Thin line */
+    background-color: #ddd; /* Light grey color */
+    margin: 40px auto; /* Spacing above and below */
+}
+
+.divider-head {
+    width: 30%; /* Adjust width to fit your design */
+    height: 2px; /* Thin line */
+    background-color: #ddd; /* Light grey color */
+    margin: 1px auto; /* Spacing above and below */
+}
+
+/* Dashed Divider (optional) */
+.divider-dashed {
+    border-top: 1px dashed #ccc;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Web Design Section Specific */
+
+/* Container */
+#web-design .content-section {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  /* Headers */
+  #web-design h2, #web-design h3 {
+    color: #333;
+  }
+  
+  #web-design p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Two-Column Layout for Web Design */
+  .web-two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 0;
+    gap: 40px;
+  }
+  
+  .web-text-column, .web-preview-column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  ul.web-skills-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+  /* Project Preview Styling */
+  .web-project-preview {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .web-project-preview a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .web-project-preview a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Features Section */
+  .web-features-section {
+    margin: 40px 0;
+  }
+  
+  .web-three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .web-column {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .web-column h4 {
+    margin-bottom: 10px;
+  }
+  
+  /* Code Snippet Section */
+  .web-code-snippet-section {
+    margin: 40px 0;
+  }
+  
+  pre {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    overflow-x: auto;
+  }
+  
+  pre code {
+    font-family: monospace;
+    color: #333;
+  }
+  
+  /* Additional Projects */
+  .web-additional-projects-section {
+    margin-top: 60px;
+  }
+  
+  .web-additional-projects-section .web-three-column-layout {
+    gap: 20px;
+  }
+  
+  .web-additional-projects-section .web-column h4 {
+    margin-bottom: 10px;
+  }
+  
+  .web-additional-projects-section .web-column p {
+    color: #555;
+  }
+
+
+
+
+
+
+  
+
+/* General Resume Styles */
+.resume-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.resume-header h1 {
+    font-size: 2.5em;
+    font-family: 'YourFont', sans-serif;
+    font-weight: bold;
+}
+
+.resume-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.resume-contact {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.contact-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover img {
+    transform: scale(1.2);
+}
+
+/* Resume Container */
+.resume-container {
+    display: flex;
+    gap: 40px; /* Adjust the space between the columns */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px; /* Adjust the container width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Left Column (Experience) */
+.experience-column {
+    flex: 1; /* Takes up 50% of the space */
+}
+
+/* Right Column (Skills) */
+.skills-column {
+    flex: 1; /* Takes up 50% of the space */
+}
+
+/* Experience Entry */
+.experience-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Ensure logos maintain their aspect ratio */
+.company-logo img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.company-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Experience Details */
+.experience-details {
+    margin-left: 30px;
+    margin-top: -35px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experience-details h3 {
+    margin-bottom: 5px;
+}
+
+.experience-details p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Skills List */
+.skills-list p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .experience-column, .skills-column {
+        flex: none;
+        width: 100%;
+    }
+}
+/* Footer */
+.resume-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+

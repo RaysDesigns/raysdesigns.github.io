@@ -6,13 +6,14 @@
     <title>Works - Raymond Kenny's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/css/lightgallery.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body class="works-page">
     <nav id="navbar">
         <img class="navbar-logo" src="https://i.postimg.cc/qvZdQPr3/Logo-name.png" alt="Logo" id="logo">
         <ul>
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="works.html" class="nav-link">My Work</a></li>
+            <li><a href="works.html" class="nav-link active">My Work</a></li>
             <li><a href="about.html" class="nav-link">About Me</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -30,24 +31,229 @@
  <main class="content-area">
     
     <div class="aside">
-        <a href="#graphic-design" id="nav-graphic-design">Graphic Design</a>
+            <a href="#graphic-design" id="nav-graphic-design">Graphic Design</a>
             <a href="#web-design" id="nav-web-design">Web Design</a>
             <a href="#motion-graphics" id="nav-motion-graphics">Motion Graphics</a>
             <a href="#social-media-marketing" id="nav-social-media-marketing">Social Media Marketing</a>
     </div>
 
+
+     <!-- Graphic Design-->
+
+
     <section id="graphic-design" class="content-section">
         <h2>Graphic Design</h2>
+        <div class="divider-head"></div>
+       <!-- Fox Hills Course Maps Section -->
+<div class="two-column-layout" id="fox-hills-maps">
+    <div class="column text-column">
+        <h3>Fox Hills Course Maps</h3>
+        <p>The Fox Hills course maps showcase the meticulous planning that goes into designing each course. These maps were created to visually represent the layout, helping golfers navigate the course with ease. Each map reflects the unique characteristics of the different courses, combining visual clarity and informative design.</p>
+    </div>
+    <div class="column slideshow-column">
+        <!-- Map Slideshow -->
+        <div class="slideshow-container map-slideshow">
+            <div class="mySlidesMap fade">
+                <img src="https://i.postimg.cc/RhdtV6q2/Classic_Port.png" style="width:75%">
+                <div class="text"><p>Classic Course</p></div>
+            </div>
+        
+            <div class="mySlidesMap fade">
+                <img src="https://i.postimg.cc/0jPmsd5p/Golden_Port.png" style="width:75%">
+                <div class="text"><p>Golden Course</p></div>
+            </div>
+        
+            <div class="mySlidesMap fade">
+                <img src="https://i.postimg.cc/858MygqX/Strat_Port.png" style="width:75%">
+                <div class="text"><p>Strategic Course</p></div>
+            </div>
+        
+            <!-- Arrows for navigation -->
+            <a class="prev" onclick="plusSlidesMap(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesMap(1)">&#10095;</a>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Coffee Bean and Coaster Section -->
+<div class="two-column-layout" id="coffee-bean-coaster">
+    <div class="column text-column">
+        <h3>Coffee Bean and Coaster</h3>
+        <p>These designs for Coffee Bean and Coaster were created to elevate the brand's presence in its coffee shops. The design approach was focused on creating a minimalist, cozy aesthetic that reflects the simplicity and warmth of their beverages. Each piece showcases the company's personality while ensuring brand consistency across various mediums.</p>
+    </div>
+    <div class="column slideshow-column">
+        <!-- Coffee Bean and Coaster Slideshow -->
+        <div class="slideshow-container coffee-slideshow">
+            <div class="mySlidesCoffee fade">
+                <img src="https://i.postimg.cc/ht462Phs/47b43d5b-06d4-47ed-a592-b8907674a21d-rw-600.jpg" style="width:75%">
+                <div class="text"><p>Coffee Bean 1</p></div>
+            </div>
+        
+            <div class="mySlidesCoffee fade">
+                <img src="https://i.postimg.cc/KYH6kSGN/7f93a4db-43e5-465f-9707-de32c6b10913-rw-600.jpg" style="width:75%">
+                <div class="text"><p>Coffee Bean 2</p></div>
+            </div>
+        
+            <div class="mySlidesCoffee fade">
+                <img src="https://i.postimg.cc/fRBnsS11/8b5cc596-817e-465e-b3d3-e4a47fddb6b3-rw-600.jpg" style="width:75%">
+                <div class="text"><p>Coffee Bean 3</p></div>
+            </div>
+        
+            <!-- Arrows for navigation -->
+            <a class="prev" onclick="plusSlidesCoffee(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesCoffee(1)">&#10095;</a>
+        </div>        
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Fox Hills Food Menus Section -->
+<div class="two-column-layout" id="fox-hills-menus">
+    <div class="column text-column">
+        <h3>Fox Hills Food Menus</h3>
+        <p>The food menus for Fox Hills Golf and Banquet Center were designed with elegance and clarity in mind. Each menu complements the upscale image of the venue, while providing an easy-to-read layout for guests. The visual design focuses on clarity and structure, making the menu items highly accessible to a wide audience.</p>
+    </div>
+    <div class="column slideshow-column">
+        <!-- Menu Slideshow -->
+        <div class="slideshow-container menu-slideshow">
+            <div class="mySlidesMenu fade">
+                <img src="https://i.postimg.cc/xdrPQkqR/menu-01.jpg" style="width:75%">
+                <div class="text"><p>Menu Page 1</p></div>
+            </div>
+        
+            <div class="mySlidesMenu fade">
+                <img src="https://i.postimg.cc/g0vH2YZP/menu-02.jpg" style="width:75%">
+                <div class="text"><p>Menu Page 2</p></div>
+            </div>
+        
+            <!-- Arrows for navigation -->
+            <a class="prev" onclick="plusSlidesMenu(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesMenu(1)">&#10095;</a>
+        </div>
+    </div>
+</div>
     </section>
+
+
+    <!-- WEB DESIGN-->
+
 
     <section id="web-design" class="content-section">
         <h2>Web Design</h2>
+        <div class="divider-head"></div>
+
+        <div id="web-design" class="content-section">
+            <h2>Web Design Projects</h2>
+          
+            <!-- Main Project -->
+            <div class="web-two-column-layout">
+              <!-- Text Column -->
+              <div class="web-text-column">
+                <h3>Main Project: Portfolio Website</h3>
+                <p>
+                  This portfolio website itself is a comprehensive example of my web
+                  design skills. It highlights clean code structure, responsive layout,
+                  smooth navigation, and polished visual aesthetics. The site
+                  demonstrates how I integrate front-end and back-end technologies for
+                  seamless user experiences.
+                </p>
+                <ul class="web-skills-list">
+                  <li>Responsive Navigation</li>
+                  <li>UI/UX Design</li>
+                  <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                  <li>Full-stack Integration</li>
+                </ul>
+              </div>
+          
+              <!-- Project Preview Column -->
+              <div class="web-preview-column">
+                <div class="web-project-preview">
+                  <h4>Live Website Demo</h4>
+                  <a href="https://your-website-link.com" target="_blank"
+                    >Visit Portfolio</a
+                  >
+                  <p>Or view the <a href="#code-snippet">Code Snippets</a> below.</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Key Features Section -->
+            <div class="web-features-section">
+              <h3>Key Features Highlighted</h3>
+              <div class="web-three-column-layout">
+                <div class="web-column">
+                  <h4>Responsive Navigation Menu</h4>
+                  <p>
+                    The menu dynamically adjusts to various screen sizes, ensuring a
+                    consistent user experience across devices.
+                  </p>
+                </div>
+                <div class="web-column">
+                  <h4>Interactive Content and Animations</h4>
+                  <p>
+                    Subtle animations improve the user experience, offering smooth
+                    transitions between content.
+                  </p>
+                </div>
+                <div class="web-column">
+                  <h4>Fully Customizable Slideshow</h4>
+                  <p>
+                    Custom-built slideshows showcase portfolio items with easy navigation
+                    arrows and touch interaction support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Code Snippets (Optional) -->
+            <div id="code-snippet" class="web-code-snippet-section">
+              <h3>Code Snippets</h3>
+              <pre><code>&lt;!-- Responsive NavBar --&gt;
+          &lt;nav id=&quot;navbar&quot;&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#work&quot;&gt;My Work&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;</code></pre>
+          
+              <p>More code snippets can be provided upon request.</p>
+            </div>
+          
+            <!-- Other Projects Section -->
+            <div class="web-additional-projects-section">
+              <h3>Additional Web Design Projects</h3>
+              <div class="web-three-column-layout">
+                <div class="web-column">
+                  <h4>Personal Blog Design</h4>
+                  <p>Custom-built blog layout with a focus on readability and mobile responsiveness.</p>
+                </div>
+                <div class="web-column">
+                  <h4>E-commerce Storefront</h4>
+                  <p>Full-stack e-commerce platform featuring product listings, shopping cart, and checkout system.</p>
+                </div>
+                <div class="web-column">
+                  <h4>Interactive Resume Page</h4>
+                  <p>An interactive, animated resume page built with HTML, CSS, and JavaScript.</p>
+                </div>
+              </div>
+            </div>
+        </div>          
     </section>
+
+
+     <!-- Motion Graphics-->
+
 
     <section id="motion-graphics" class="content-section">
         <h2>Motion Graphics</h2>
-        <div class="container">
-            <div class="text-content">
+        <div class="divider-head"></div>
+        <div class="two-column-layout" id="motion">
+            <div class="column text-column">
                 <h3>Animated Logos</h3>
                 <p>Presented here is my portfolio of motion graphics, a compilation that highlights my imaginative and enthralling motion graphics projects. By skillfully fuzing animation, visual effects, and narrative ingenuity, I bring concepts to life, giving rise to dynamic and captivating visual storytelling.</p>
             </div>
@@ -69,147 +275,173 @@
     <!-- SOCIAL MEDIA-->
 
 
-    <section id="social-media-marketing" >
+    <section id="social-media-marketing" class="content-section">
         <h2>Social Media Marketing</h2>
-        <div class="three-column-layout">
-            <div class="column text-column">
-                <h3>FOX HILLS GOLF AND BANQUET</h3>
-                <p>Assisting the marketing department at Fox Hills Golf and Banquet Center, I helped with enhancing the company's branding efforts. My responsibilities included designing aesthetically pleasing, easy to navigate food menus and event flyers that aligned with the center's upscale image. I also developed engaging social media content, ensuring consistency in brand voice and created marketing content calendars.</p>
-            </div>
-            <div class="column slideshow-column">
-                <!-- First Slideshow -->
-                <div id="first-slideshow" class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="https://i.postimg.cc/sfYhLkPJ/Heritage-Cares-Posters-Recovered.png" style="width:80%">
-                        <div class="text">Flyer | Golf Outing</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                        <img src="https://i.postimg.cc/PJQv8Df7/Heritage-Cares-Posters-05.png" style="width:80%">
-                        <div class="text">Flyer | Sponsorship Packages</div>
-                    </div>
+        <div class="divider-head"></div>
+
+    <!-- Spice Merchants Section -->
+    <div class="three-column-layout" id="spice">
+        <div class="column text-column">
+            <h3>Spice Merchants of Northville</h3>
+            <p>I managed social media campaigns and developed marketing materials for Spice Merchants of Northville. My focus was on creating engaging, visually cohesive content that aligned with the brand’s identity while promoting their products and events.</p>
+        </div>
+        <!-- Middle column: Slideshow -->
+        <div class="column slideshow-column">
+            <div id="spice-slideshow-main" class="slideshow-container">
+                <div class="mySlidesSpiceMain fade">
+                    <img src="https://i.postimg.cc/N05VwJ6r/88a58b64-df1c-49d1-9c92-91188ef3c21d-rw-600.png" style="width:80%">
+                    <div class="text"><p>Flyer</p></div>
                 </div>
-            </div>
-            <div class="column slideshow-column">
-                <!-- Second Slideshow -->
-                <div id="additional-slideshow" class="slideshow-container">
-                    <div class="mySlides2 fade">
-                        <img src="https://i.postimg.cc/85dYhVkK/Untitled-3.png" style="width:70%">
-                        <div class="text">Social Media Post | Golf Event</div>
-                    </div>
-                    
-                    <div class="mySlides2 fade">
-                        <img src="https://i.postimg.cc/6qFQGs6p/7f877811-c34d-4c8d-9cef-65f217c3322d.jpg" style="width:70%">
-                        <div class="text">Social Media Post | Spooky Golf</div>
-                    </div>
+                <div class="mySlidesSpiceMain fade">
+                    <img src="https://i.postimg.cc/Kz3dtq4y/20a500ca-6c33-4f42-9068-250b52513215-rw-600.png" style="width:80%">
+                    <div class="text"><p>Coupon</p></div>
                 </div>
+                <a class="prev" onclick="plusSlidesSpiceMain(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlidesSpiceMain(1)">&#10095;</a>
             </div>
         </div>
-        
-        <!-- New Row -->
-        <div class="three-column-layout">
-            <div class="column text-column">
-                <h3>SPICE MERCHANTS NORTHVILLE</h3>
-                <p>As a volunteer at Spice Merchants, I managed their social media, focusing on content creation for events, adhering to brand identity, and conducting product photography. Utilizing Meta Business Suite, I effectively coordinated posts on Facebook and Instagram. My efforts boosted online engagement and strengthened the brand's digital presence.</p>
-            </div>
-            <div class="column slideshow-column">
-                <!-- Third Slideshow -->
-                <div id="third-slideshow" class="slideshow-container">
-                    <div class="mySlides3 fade">
-                        <img src="https://i.postimg.cc/N05VwJ6r/88a58b64-df1c-49d1-9c92-91188ef3c21d-rw-600.png" style="width:80%">
-                        <div class="text">Flyer | Cookout Event</div>
-                    </div>
-                    
-                    <div class="mySlides3 fade">
-                        <img src="https://i.postimg.cc/Kz3dtq4y/20a500ca-6c33-4f42-9068-250b52513215-rw-600.png" style="width:80%">
-                        <div class="text">Flyer | Discount</div>
-                    </div>
+        <!-- Right column: Slideshow -->
+        <div class="column slideshow-column">
+            <div id="spice-slideshow-square" class="slideshow-container">
+                <div class="mySlidesSpiceSquare fade">
+                    <img src="https://i.postimg.cc/xC2PKxdt/Thanksgiving-Instagram-Post-2.png" style="width:60%">
+                    <div class="text"><p>Holiday Post</p></div>
                 </div>
-            </div>
-            <div class="column slideshow-column">
-                <!-- Fourth Slideshow -->
-                <div id="fourth-slideshow" class="slideshow-container">
-                    <div class="mySlides4 fade">
-                        <img src="https://i.postimg.cc/xC2PKxdt/Thanksgiving-Instagram-Post-2.png" style="width:70%">
-                        <div class="text">Social Media Post | Thanksgiving Closure</div>
-                    </div>
-                    
-                    <div class="mySlides4 fade">
-                        <img src="https://i.postimg.cc/vmVkZVJd/Untitled-9.png" style="width:70%">
-                        <div class="text">Social Media Post | Black Friday</div>
-                    </div>
+                <div class="mySlidesSpiceSquare fade">
+                    <img src="https://i.postimg.cc/vmVkZVJd/Untitled-9.png" style="width:60%">
+                    <div class="text"><p>Event Post</p></div>
                 </div>
+                <a class="prev" onclick="plusSlidesSpiceSquare(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlidesSpiceSquare(1)">&#10095;</a>
             </div>
         </div>
-        
+    </div>
+
         <!-- New Third Row -->
-<div class="three-column-layout">
-    <div class="column instagram-column">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/spicemerchantsnorthville/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-            <div style="padding:16px;">
-                <a href="https://www.instagram.com/spicemerchantsnorthville/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                    <div style="display: flex; flex-direction: row; align-items: center;">
-                        <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                        </div>
-                    </div>
-                    <div style="padding: 19% 0;"></div>
-                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                                    <g>
-                                        <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <div style="padding-top: 8px;">
-                        <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div>
-                    </div>
-                    <div style="padding: 12.5% 0;"></div>
-                    <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
-                        <div>
-                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
-                            <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
-                            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
-                        </div>
-                        <div style="margin-left: 8px;">
-                            <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
-                            <div style="width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
-                        </div>
-                        <div style="margin-left: auto;">
-                            <div style="width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
-                            <div style="background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
-                            <div style="width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
-                        </div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
-                        <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
-                        <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
-                    </div>
-                </a>
-                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                    <a href="https://www.instagram.com/spicemerchantsnorthville/?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">Spice Merchants Of Northville</a> (@<a href="https://www.instagram.com/spicemerchantsnorthville/?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">spicemerchantsnorthville</a>) • Instagram photos and videos
-                </p>
-            </div>
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
+
+<!-- Title Section -->
+<div id="strategy-section">
+<h2 class="center-title">Social Media Marketing Strategy</h2>
+
+<!-- First Row -->
+<div class="two-column-layout">
+    <div class="column image-column">
+        <img src="https://i.postimg.cc/7LnhT4pV/d5d30647.jpg" alt="Product Photography - Spice Merchants Northville" class="strategy-image">
+        <div class="slideshow-footer">Product Photography - Spice Merchants Northville</div>
+    </div>
+    <div class="column text-column">
+        <h2>Project Description/Goals:</h2>
+        <p><b>1.</b> Expand the store's influence by enhancing the brand's presence on social media platforms and boosting its online traffic.</p>
+        <p><b>2.</b> Drive customer engagement by promoting products like merchandise and seasonal teas.</p>
+    </div>
+</div>
+<br/>
+<!-- Second Row -->
+<div class="two-column-layout">
+    <div class="column text-column">
+        <h2>Creative Process and Strategy:</h2>
+        <p><b>1.</b> Develop and execute strategic initiatives to boost engagement on social media platforms, such as:
+           
+              <br/>  • Providing special offers to users who interact with our posts.</li>
+              <br/>  • Sharing enticing recipes featuring ingredients readily available at our store.</li>
+
+        </p>
+        <p><b>2.</b> Craft engaging content for Facebook, Instagram, and the Fusion Brew website, ensuring it aligns with the brand's unique tone.</p>
+        <p><b>3.</b> Produce high-resolution photographs of Spice Merchant's offerings, and design visually striking and captivating digital content for the brand's social media presence.</p>
+    </div>
+    <div class="column strat-image-column">
+        <img src="https://i.postimg.cc/QM3VtCnC/6bc44868.png" alt="Creative Strategy" class="strategy-image">
     </div>
 </div>
 
-        
-            
-    </section>
+<!-- Third Row: Skills -->
+<div class="four-column-layout">
+    <div class="column">
+        <h3>Skills Used and Learned</h3>
+    </div>
+    <div class="column">
+        <p>Meta Business Suite</p>
+        <p>Product Photography</p>
+    </div>
+    <div class="column">
+        <p>Graphic Design</p>
+        <p>Photoshop</p>
+    </div>
+    <div class="column">
+        <p>Copywriting</p>
+        <p>Product Staging</p>
+    </div>
+</div>
 
+<!-- Fourth Row: Results -->
+<div class="results-section">
+    <h3>Results:</h3>
+    <p><b>Facebook visits have surged by 174%</b> over the last year, thanks to well-planned campaigns, captivating images, and direct engagement with the audience.</p>
+    <p><b>Enhanced product photography</b> has <b>boosted visits</b> to our social media profiles, raising community awareness about our store.</p>
+</div>
+</div>
+
+
+<div class="instagram-embed-container">
+    <div class="instagram-post">
+        <!-- Instagram Embed 1 -->
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CoH1Hdasih6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <!-- Instagram Embed 2 -->
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CyRau6rNS3h/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="instagram-post">
+        <!-- Instagram Embed 3 -->
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cwu6I2yLA9p/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"></blockquote>
+    </div>
+</div>      
+<br/>
+<div class="divider"></div>
+
+ <!-- Fox Hills Section -->
+ <div class="three-column-layout" id="foxhill">
+    <div class="column text-column">
+        <h3>Fox Hills Golf and Banquet</h3>
+        <p>At Fox Hills Golf and Banquet Center, I assisted with developing marketing materials, including posters and social media posts. My role involved creating visually appealing designs that aligned with the brand's upscale image and promoting various events.</p>
+    </div>
+    <!-- Middle column: Slideshow -->
+    <div class="column slideshow-column">
+        <div id="foxhill-slideshow-main" class="slideshow-container">
+            <div class="mySlidesFoxhillMain fade">
+                <img src="https://i.postimg.cc/sfYhLkPJ/Heritage-Cares-Posters-Recovered.png" style="width:80%">
+                <div class="text"><p>Event Flyer</p></div>
+            </div>
+            <div class="mySlidesFoxhillMain fade">
+                <img src="https://i.postimg.cc/PJQv8Df7/Heritage-Cares-Posters-05.png" style="width:80%">
+                <div class="text"><p>Info Flyer</p></div>
+            </div>
+            <a class="prev" onclick="plusSlidesFoxhillMain(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesFoxhillMain(1)">&#10095;</a>
+        </div>
+    </div>
+    <!-- Right column: Slideshow -->
+    <div class="column slideshow-column">
+        <div id="foxhill-slideshow-square" class="slideshow-container">
+            <div class="mySlidesFoxhillSquare fade">
+                <img src="https://i.postimg.cc/85dYhVkK/Untitled-3.png" style="width:60%">
+                <div class="text"><p>Event Post</p></div>
+            </div>
+            <div class="mySlidesFoxhillSquare fade">
+                <img src="https://i.postimg.cc/6qFQGs6p/7f877811-c34d-4c8d-9cef-65f217c3322d.jpg" style="width:60%">
+                <div class="text"><p>Holiday Post</p></div>
+            </div>
+            <a class="prev" onclick="plusSlidesFoxhillSquare(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesFoxhillSquare(1)">&#10095;</a>
+        </div>
+    </div>
+</div>
+</section>
 </main>
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/js/lightgallery.min.js"></script>
-
+<script async src="//www.instagram.com/embed.js"></script>
 
 
 </body>

@@ -68,15 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
           let targetId = this.getAttribute('href'); // Get the target id (e.g., #graphic-design)
           let targetElement = document.querySelector(targetId); // Select the target element
-
-          if (targetElement) {
-              let topOffset = targetElement.offsetTop - navbarHeight; // Calculate position to scroll to
-              window.scrollTo({
-                  top: topOffset,
-                  behavior: 'smooth' // Smooth scroll to the target
-              });
-              localStorage.setItem('currentSection', targetId);
-          }
       });
   });
 });
@@ -117,66 +108,146 @@ document.addEventListener("DOMContentLoaded", function() {
       section.style.display = 'none';
     });
     currentSectionElement.style.display = 'block';
-    window.scrollTo({
-      top: currentSectionElement.offsetTop - document.getElementById('navbar').offsetHeight,
-      behavior: 'smooth'
-    });
+    // window.scrollTo({
+    //  top: currentSectionElement.offsetTop - document.getElementById('navbar').offsetHeight,
+    //  behavior: 'smooth'
+    // });
   }
 });
 
-let slideIndex1 = 0;
-let slideIndex2 = 0;
-let slideIndex3 = 0;
-let slideIndex4 = 0;
-showSlides1();
-showSlides2();
-showSlides3();
-showSlides4();
 
-function showSlides1() {
+
+
+// Map slideshow
+let slideIndexMap = 1;
+showSlidesMap(slideIndexMap);
+
+function plusSlidesMap(n) {
+    showSlidesMap(slideIndexMap += n);
+}
+
+function showSlidesMap(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slidesMap = document.getElementsByClassName("mySlidesMap");
+    if (n > slidesMap.length) { slideIndexMap = 1 }
+    if (n < 1) { slideIndexMap = slidesMap.length }
+    for (i = 0; i < slidesMap.length; i++) {
+        slidesMap[i].style.display = "none";
+    }
+    slidesMap[slideIndexMap - 1].style.display = "block";
+}
+
+// Coffee slideshow
+let slideIndexCoffee = 1;
+showSlidesCoffee(slideIndexCoffee);
+
+function plusSlidesCoffee(n) {
+    showSlidesCoffee(slideIndexCoffee += n);
+}
+
+function showSlidesCoffee(n) {
+    let i;
+    let slidesCoffee = document.getElementsByClassName("mySlidesCoffee");
+    if (n > slidesCoffee.length) { slideIndexCoffee = 1 }
+    if (n < 1) { slideIndexCoffee = slidesCoffee.length }
+    for (i = 0; i < slidesCoffee.length; i++) {
+        slidesCoffee[i].style.display = "none";
+    }
+    slidesCoffee[slideIndexCoffee - 1].style.display = "block";
+}
+
+// Menu slideshow
+let slideIndexMenu = 1;
+showSlidesMenu(slideIndexMenu);
+
+function plusSlidesMenu(n) {
+    showSlidesMenu(slideIndexMenu += n);
+}
+
+function showSlidesMenu(n) {
+    let i;
+    let slidesMenu = document.getElementsByClassName("mySlidesMenu");
+    if (n > slidesMenu.length) { slideIndexMenu = 1 }
+    if (n < 1) { slideIndexMenu = slidesMenu.length }
+    for (i = 0; i < slidesMenu.length; i++) {
+        slidesMenu[i].style.display = "none";
+    }
+    slidesMenu[slideIndexMenu - 1].style.display = "block";
+}
+
+// Fox Hills main slideshow
+let slideIndexFoxhillMain = 1;
+showSlidesFoxhillMain(slideIndexFoxhillMain);
+
+function plusSlidesFoxhillMain(n) {
+    showSlidesFoxhillMain(slideIndexFoxhillMain += n);
+}
+
+function showSlidesFoxhillMain(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlidesFoxhillMain");
+    if (n > slides.length) { slideIndexFoxhillMain = 1 }
+    if (n < 1) { slideIndexFoxhillMain = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex1++;
-    if (slideIndex1 > slides.length) { slideIndex1 = 1 }
-    slides[slideIndex1 - 1].style.display = "block";
-    setTimeout(showSlides1, 4000); // Change image every 4 seconds
+    slides[slideIndexFoxhillMain - 1].style.display = "block";
 }
 
-function showSlides2() {
+// Fox Hills square slideshow
+let slideIndexFoxhillSquare = 1;
+showSlidesFoxhillSquare(slideIndexFoxhillSquare);
+
+function plusSlidesFoxhillSquare(n) {
+    showSlidesFoxhillSquare(slideIndexFoxhillSquare += n);
+}
+
+function showSlidesFoxhillSquare(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides2");
+    let slides = document.getElementsByClassName("mySlidesFoxhillSquare");
+    if (n > slides.length) { slideIndexFoxhillSquare = 1 }
+    if (n < 1) { slideIndexFoxhillSquare = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex2++;
-    if (slideIndex2 > slides.length) { slideIndex2 = 1 }
-    slides[slideIndex2 - 1].style.display = "block";
-    setTimeout(showSlides2, 4000); // Change image every 4 seconds
+    slides[slideIndexFoxhillSquare - 1].style.display = "block";
 }
 
-function showSlides3() {
+// Spice Merchants main slideshow
+let slideIndexSpiceMain = 1;
+showSlidesSpiceMain(slideIndexSpiceMain);
+
+function plusSlidesSpiceMain(n) {
+    showSlidesSpiceMain(slideIndexSpiceMain += n);
+}
+
+function showSlidesSpiceMain(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides3");
+    let slides = document.getElementsByClassName("mySlidesSpiceMain");
+    if (n > slides.length) { slideIndexSpiceMain = 1 }
+    if (n < 1) { slideIndexSpiceMain = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex3++;
-    if (slideIndex3 > slides.length) { slideIndex3 = 1 }
-    slides[slideIndex3 - 1].style.display = "block";
-    setTimeout(showSlides3, 4000); // Change image every 4 seconds
+    slides[slideIndexSpiceMain - 1].style.display = "block";
 }
 
-function showSlides4() {
+// Spice Merchants square slideshow
+let slideIndexSpiceSquare = 1;
+showSlidesSpiceSquare(slideIndexSpiceSquare);
+
+function plusSlidesSpiceSquare(n) {
+    showSlidesSpiceSquare(slideIndexSpiceSquare += n);
+}
+
+function showSlidesSpiceSquare(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides4");
+    let slides = document.getElementsByClassName("mySlidesSpiceSquare");
+    if (n > slides.length) { slideIndexSpiceSquare = 1 }
+    if (n < 1) { slideIndexSpiceSquare = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex4++;
-    if (slideIndex4 > slides.length) { slideIndex4 = 1 }
-    slides[slideIndex4 - 1].style.display = "block";
-    setTimeout(showSlides4, 4000); // Change image every 4 seconds
+    slides[slideIndexSpiceSquare - 1].style.display = "block";
 }
+
