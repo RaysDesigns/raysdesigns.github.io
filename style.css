@@ -650,13 +650,12 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* 
 .grid-item img:hover {
-     transform: scale(1.1);
-    transition: transform 0.3s;
+    
 }
 
-/* Responsive Design */
+Responsive Design */
 @media (max-width: 768px) {
     .motion-container {
         flex-direction: column; /* Stack text and grid vertically on smaller screens */
