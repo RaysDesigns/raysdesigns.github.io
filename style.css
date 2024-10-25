@@ -621,6 +621,7 @@ section {
 
 
 
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns for the grid */
@@ -648,6 +649,11 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.grid-item img:hover {
+     transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 /* Responsive Design */
