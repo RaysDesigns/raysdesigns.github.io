@@ -72,6 +72,38 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.aside a');
+
+    // Add click event listeners to update the active class
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            // Remove active class from all links
+            links.forEach(item => item.classList.remove('active'));
+
+            // Add active class to the clicked link
+            link.classList.add('active');
+        });
+    });
+
+    // Optionally, highlight based on the current hash in the URL
+    const setActiveLink = () => {
+        const currentHash = window.location.hash;
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentHash) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    };
+
+    // Run on page load and when hash changes
+    window.addEventListener('hashchange', setActiveLink);
+    setActiveLink();
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('section');
   const links = document.querySelectorAll('.aside a');
@@ -100,19 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  // Load the current section from localStorage
-  const currentSection = localStorage.getItem('currentSection') || '#graphic-design';
-  const currentSectionElement = document.querySelector(currentSection);
-  if (currentSectionElement) {
-    sections.forEach(section => {
-      section.style.display = 'none';
-    });
-    currentSectionElement.style.display = 'block';
-    // window.scrollTo({
-    //  top: currentSectionElement.offsetTop - document.getElementById('navbar').offsetHeight,
-    //  behavior: 'smooth'
-    // });
-  }
+
 });
 
 

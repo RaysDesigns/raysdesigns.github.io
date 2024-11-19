@@ -731,6 +731,18 @@ Responsive Design */
     right: 25px; /* Shift right arrow outside the container, adjust as needed */
 }
 
+#foxhill .slideshow-column:nth-child(2) .prev, 
+#spice .slideshow-column:nth-child(2) .prev {
+     /* Move left arrow inward by 10px for third column */
+    margin-top: -50px; 
+}
+#foxhill .slideshow-column:nth-child(2) .next, 
+#spice .slideshow-column:nth-child(2) .next {
+     /* Move left arrow inward by 10px for third column */
+  
+    margin-top: -50px;
+}
+
 #foxhill .slideshow-column:nth-child(3) .prev, 
 #spice .slideshow-column:nth-child(3) .prev {
     left: 65px;  /* Move left arrow inward by 10px for third column */

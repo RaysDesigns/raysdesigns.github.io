@@ -146,7 +146,6 @@
         <div class="divider-head"></div>
 
         <div id="web-design" class="content-section">
-            <h2>Web Design Projects</h2>
           
             <!-- Main Project -->
             <div class="web-two-column-layout">
@@ -157,14 +156,13 @@
                   This portfolio website itself is a comprehensive example of my web
                   design skills. It highlights clean code structure, responsive layout,
                   smooth navigation, and polished visual aesthetics. The site
-                  demonstrates how I integrate front-end and back-end technologies for
+                  demonstrates how I integrate front-end technologies for
                   seamless user experiences.
                 </p>
                 <ul class="web-skills-list">
                   <li>Responsive Navigation</li>
                   <li>UI/UX Design</li>
                   <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                  <li>Full-stack Integration</li>
                 </ul>
               </div>
           
@@ -211,36 +209,54 @@
             <!-- Code Snippets (Optional) -->
             <div id="code-snippet" class="web-code-snippet-section">
               <h3>Code Snippets</h3>
-              <pre><code>&lt;!-- Responsive NavBar --&gt;
-          &lt;nav id=&quot;navbar&quot;&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#work&quot;&gt;My Work&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/nav&gt;</code></pre>
+              <pre><code>&lt;!-- Lightbox Image Gallery --&gt;
+                &lt;div class=&quot;gallery&quot;&gt;
+                  &lt;div class=&quot;gallery__item&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;gallery__item__link&quot;&gt;
+                      &lt;img src=&quot;https://i.postimg.cc/BbFf4xCQ/Photo-6553602-DJI-2-jpg-4306460-0-202151413384-photo-original.jpg&quot; 
+                           alt=&quot;Stunning View&quot; 
+                           class=&quot;lightbox-image&quot; 
+                           data-fullsize=&quot;https://i.postimg.cc/BbFf4xCQ/Photo-6553602-DJI-2-jpg-4306460-0-202151413384-photo-original.jpg&quot;&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;gallery__item&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;gallery__item__link&quot;&gt;
+                      &lt;img src=&quot;https://i.postimg.cc/7YvyXWxC/Remote-Media-File-6553621-0-2021-05-15-12-13-06.jpg&quot; 
+                           alt=&quot;Breathtaking Lake&quot; 
+                           class=&quot;lightbox-image&quot; 
+                           data-fullsize=&quot;https://i.postimg.cc/7YvyXWxC/Remote-Media-File-6553621-0-2021-05-15-12-13-06.jpg&quot;&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                </code></pre>
+                
+                <pre><code>// Lightbox Functionality
+                document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+                  // Create Lightbox Overlay
+                  const lightboxOverlay = document.createElement(&quot;div&quot;);
+                  lightboxOverlay.className = &quot;lightbox-overlay&quot;;
+                  lightboxOverlay.innerHTML = `
+                    &lt;img /&gt;
+                    &lt;span class=&quot;lightbox-close&quot;&gt;&amp;times;&lt;/span&gt;
+                  `;
+                  document.body.appendChild(lightboxOverlay);
+                
+                  // Open Lightbox on Image Click
+                  document.addEventListener(&quot;click&quot;, (e) =&gt; {
+                    if (e.target.classList.contains(&quot;lightbox-image&quot;)) {
+                      const imgSrc = e.target.getAttribute(&quot;data-fullsize&quot;);
+                      lightboxOverlay.querySelector(&quot;img&quot;).src = imgSrc;
+                      lightboxOverlay.style.display = &quot;flex&quot;;
+                    }
+                    // Close Lightbox
+                    if (e.target.classList.contains(&quot;lightbox-close&quot;) || e.target === lightboxOverlay) {
+                      lightboxOverlay.style.display = &quot;none&quot;;
+                    }
+                  });
+                });
+                </code></pre>
           
               <p>More code snippets can be provided upon request.</p>
-            </div>
-          
-            <!-- Other Projects Section -->
-            <div class="web-additional-projects-section">
-              <h3>Additional Web Design Projects</h3>
-              <div class="web-three-column-layout">
-                <div class="web-column">
-                  <h4>Personal Blog Design</h4>
-                  <p>Custom-built blog layout with a focus on readability and mobile responsiveness.</p>
-                </div>
-                <div class="web-column">
-                  <h4>E-commerce Storefront</h4>
-                  <p>Full-stack e-commerce platform featuring product listings, shopping cart, and checkout system.</p>
-                </div>
-                <div class="web-column">
-                  <h4>Interactive Resume Page</h4>
-                  <p>An interactive, animated resume page built with HTML, CSS, and JavaScript.</p>
-                </div>
-              </div>
             </div>
         </div>          
     </section>
@@ -436,7 +452,8 @@
         </div>
     </div>
 </div>
-</section>
+    </section>
+
 </main>
 
 <script src="script.js"></script>
