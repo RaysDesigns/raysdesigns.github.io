@@ -648,14 +648,8 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-/* 
-.grid-item img:hover {
-    
-}
 
-Responsive Design */
+}
 @media (max-width: 768px) {
     .motion-container {
         flex-direction: column; /* Stack text and grid vertically on smaller screens */
