@@ -87,6 +87,7 @@ p {
     transition: opacity 0.3s ease; /* Smooth transition for the logo swap */
 }
 
+
 #navbar ul {
     list-style-type: none;
     margin: 0;
@@ -196,6 +197,15 @@ p {
     color: #333333; /* Very Dark Gray for text */
     margin-bottom: 20px;
     text-align: center;
+}
+
+.content-box img {
+    display: block; /* Ensures that the image is on its own line */
+    width: 100%; /* Sets the width of the images to be the same */
+    height: auto;
+    max-height: 300px; /* Maintains the aspect ratio */
+    max-width: 300px; /* Adjust this value based on your design requirements */
+    margin: 0 auto; /* Centers the image within the content-box */
 }
 
 .content-box img {
@@ -645,7 +655,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 50%;
     left: 50%;
 
@@ -978,6 +987,8 @@ text-align: center;
 max-width: 90%;
 }
 
+
+
 .menus img{
    max-width: 60%; 
 }
@@ -1011,6 +1022,7 @@ max-width: 90%;
 #web-design .content-section {
     padding: 60px;
     text-align: center;
+    max-width: 1200px;
   }
   
   /* Headers */
@@ -1028,7 +1040,7 @@ max-width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 40px 0;
+    margin: 60px 0;
     gap: 40px;
   }
   
@@ -1264,5 +1276,29 @@ max-width: 90%;
 .contact-icon:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
 }
 
